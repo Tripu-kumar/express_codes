@@ -1,0 +1,16 @@
+doctype html
+html
+   head
+      title "Hello Pug"
+   body
+     h1(style="color:red; text-align:center") FORM DATA
+     table(border="2",cellpadding="10") 
+        thead 
+          th FULLNAME 
+          th EMAIL 
+          th MOBILENO
+        each val in allemployees 
+         tr 
+           td #{val.fullname}
+           td #{val.email}
+           td #{val.phone}
