@@ -12,4 +12,14 @@ router.post("/sturegister",function(req,res){
         studata.push(req.body)
         res.send("REGISTRATION SUCCESSFULL")
     })
+router.get("/studetails/:x",function(req,res){
+        var stu = studata.find((e,i)=>{
+           if (e.phone===Number(req.params.x)){
+               return true
+           }
+           else{
+               return false
+           }
+        })
+        res.render("studetails",{stulist:stu})})
 module.exports = router

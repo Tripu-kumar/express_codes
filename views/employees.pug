@@ -11,6 +11,7 @@ html
           th MOBILENO
         each val in allemployees 
          tr 
-           td #{val.fullname}
+           td 
+             a(href=`/employee/details/${val.phone}`) #{val.fullname}
            td #{val.email}
            td #{val.phone}

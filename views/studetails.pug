@@ -1,0 +1,19 @@
+doctype html
+html
+   head
+      title "Hello Pug"
+   body
+     h1(style="color:red; text-align:center") FORM DATA
+     table(border="2",cellpadding="10") 
+        thead 
+          th FULLNAME 
+          th EMAIL 
+          th MOBILENO 
+          th ADDRESS 
+          th COURSE  
+        tr 
+          td #{stulist.fullname}
+          td #{stulist.email}
+          td #{stulist.phone}
+          td #{stulist.address}
+          td #{stulist.course}

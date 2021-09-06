@@ -11,6 +11,7 @@ html
           th MOBILENO
         each val in allstudents 
          tr 
-           td #{val.fullname}
+           td 
+             a(href=`/student/studetails/${val.phone}`) #{val.fullname}
            td #{val.email}
            td #{val.phone}

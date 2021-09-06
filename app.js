@@ -11,7 +11,7 @@ app.use("/student",studentrouter)
 app.use("/employee",employeerouter)
 app.get("/",function(req,res){res.sendFile(__dirname+"/homepage.html")})
 app.get("/reg",function(req,res){res.sendFile(__dirname+"/registration.html")})
-
+app.use(express.static(__dirname+"/open"))
 app.post("/register",function(req,res){
     data.push(req.body)
     res.render("students",{
