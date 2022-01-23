@@ -1,0 +1,11 @@
+html    
+    body 
+        form(action="/addprofilepic" method="POST" enctype="multipart/form-data")
+            label ID
+            input(type="text" value=`${studentid}` name="id")
+            br
+            label UPDATE PROFILE PIC
+            input(type="file" name="profilepic")
+            br
+            br
+            button submit 

@@ -1,0 +1,12 @@
+html
+   head
+      title "Profile page"
+   body
+     h1(style="color:red; text-align:center") PROFILE PAGE 
+     each val in allstudents 
+          img(src=`/${val.profilePic}` width="200px")
+          h1 FirstName: #{val.firstname}
+          h1 LastName: #{val.lastname}
+          h1 Age: #{val.age}
+          h1 weight:#{val.weightEntry[0].weight}
+          h1 Height:#{val.height}

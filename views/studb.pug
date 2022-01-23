@@ -1,0 +1,24 @@
+html
+   head
+      title "Hello Pug"
+   body
+     h1(style="color:red; text-align:center") FORM DATA
+     table(border="2",cellpadding="10") 
+        thead 
+          th PROFILEPIC 
+          th FIRSTNAME
+          th DELETE 
+          th ADD HEIGHT AND WEIGHT 
+          th UPDATE PROFILEPIC 
+        each val in allstudents 
+         tr 
+           td 
+             img(src=`/${val.profilePic}` width="200px")
+           td 
+             a(href=`/studetails/${val._id}`) #{val.firstname}
+           td
+             a(href=`/deletestudent/${val._id}`) DELETESTUDENT
+           td 
+             a(href=`/StudentWeightform/${val._id}`) EDIT DATA 
+           td 
+             a(href=`/updateprofilepicform/${val._id}`) UPDATE PROFILE PIC

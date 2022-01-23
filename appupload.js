@@ -1,0 +1,12 @@
+var express = require("express")
+var app = express()
+app.use(express.urlencoded({extended:true}))
+app.use(express.json())
+const multer = require('multer')
+const upload = multer({dest:'uploads/'})
+app.get("/uploadform",function(req,res){res.sendFile(__dirname+"/fileuploadform.html")})
+app.post("/uploadedstudent",upload.single('profilepic'),function(req,res){
+    console.log(req.body)
+    res.send("profilepic uploaded successfully")
+})
+app.listen(9080,function(){console.log("listening on 9080")})
